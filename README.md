@@ -5,6 +5,16 @@ npm install (frontend)
 npm install cors (backend)
 npm install --save react-router-dom (frontend)
 
+# api key from enviormental variable
+
+1. backendbe kell egy app-env file
+2. app-env file-ba : export API_KEY="ide kell az api key"
+3. backend mappában(futtatni): source app-env
+4. server.js-ben :
+   const api_key = process.env.API_KEY;
+   const newsapi = new NewsAPI(api_key);
+5. backend gitignorban: app.env
+
 ## Story
 
 Create your own online newspaper - a tech-magazine. Create a catchy landing page and while you do not have writers - yet - use an online news API to fetch the news. Do not link them to the original sites - make the articles look better on YOUR site than the original!
