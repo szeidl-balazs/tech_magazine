@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const NewsAPI = require("newsapi");
-const PORT = 8000;
 const api_key = process.env.API_KEY;
 const newsapi = new NewsAPI(api_key);
+const PORT = 8000;
 
 app.use(cors());
 
