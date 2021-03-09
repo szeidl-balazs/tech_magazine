@@ -1,20 +1,21 @@
 import "./scss/App.scss";
-import Axios from "axios";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Wall from "./components/Wall";
+import Landing from "./components/Landing";
+
+
 
 function App() {
-  const register = () => {
-    Axios({
-      method: "GET",
-      url: "http://localhost:8000/",
-    }).then((res) => console.log(res));
-  };
-
+ 
   return (
-    <div className="App">
-      <div>
-        <button onClick={register}>Get Data</button>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Landing}/>
+          <Route path="/wall" exact component={Wall}/>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
