@@ -1,6 +1,7 @@
 import React from 'react'
 import Axios from "axios";
 
+
 function Wall() {
 
   const register = () => {
