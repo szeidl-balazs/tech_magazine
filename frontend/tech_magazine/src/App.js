@@ -1,10 +1,19 @@
 import "./scss/App.scss";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Wall from "./components/Wall";
+import Landing from "./components/Landing";
 
 function App() {
+ 
   return (
-    <div className="App">
-      <div></div>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/landing" component={Landing}/>
+          <Route path="/" exact component={Wall}/>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
