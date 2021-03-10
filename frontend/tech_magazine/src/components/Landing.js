@@ -5,7 +5,7 @@ import logo2 from "../logo/logo2.svg"
 function Landing() {
   return (
     <div className="landing-container">
-      <h1 className="landing">OUTLAW NEWS</h1>
+      <h1 className="landing">BETYÁR NEWS</h1>
       <div className="overlay"></div>
       <div className="flip-box">
         <div className="flip-box-inner">

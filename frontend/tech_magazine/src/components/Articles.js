@@ -1,7 +1,7 @@
 function Articles({ news }) {
   return (
       <div className="article-container">
-        <h1>OUTLAW NEWS</h1>
+        <h1>BETYÁR NEWS</h1>
         <h2>Technology</h2>
         {news.data.articles.map((article, index) => (
           <div className="article" key={index}>

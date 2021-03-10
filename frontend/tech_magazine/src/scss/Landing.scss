@@ -1,7 +1,7 @@
 @at-root :root {
-  --primary-color: #000000;
+  --primary-color: #348100;
   --secondary-color: #ffffff;
-  --complimentary-color: #000000;
+  --complimentary-color: #b30000;
 }
 
 .landing-container {
@@ -33,6 +33,7 @@
 
   transform: translateY(-600px);
   animation: 2s slideIn ease-in-out forwards 1s;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .landing::before {
