@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import Articles from "./Articles";
 
 function Wall() {
   const [data, setData] = useState(undefined);
@@ -26,14 +27,7 @@ function Wall() {
     <div>
       <div>
         <button onClick={register}>Get Data</button>
-        <div>
-          {data.data.articles.map((article, index) => (
-            <div>
-              <h2 key={index}>{article.title}</h2>
-              <img src={article.urlToImage} alt="fos" />
-            </div>
-          ))}
-        </div>
+        <Articles news={data} />
       </div>
     </div>
   );
