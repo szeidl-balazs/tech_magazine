@@ -1,3 +1,5 @@
+//import LoadingMask from "./LoadingMask"
+
 function Articles({ news }) {
   return (
       <div className="article-container">

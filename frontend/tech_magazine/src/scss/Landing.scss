@@ -26,14 +26,16 @@
   position: relative;
   text-align: center;
 
+  padding-bottom: 40px;
+
   width: 100%;
 
   font-size: 150px;
   color: var(--primary-color);
+  text-shadow: 2px 2px 4px #000000;
 
   transform: translateY(-600px);
   animation: 2s slideIn ease-in-out forwards 1s;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .landing::before {
@@ -103,6 +105,17 @@ h3 {
   img {
     height: 300px;
   }
+}
+
+.link-container {
+  width: 100%;
+}
+
+.link {
+  text-align: center;
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
 }
 
 //flip-box
