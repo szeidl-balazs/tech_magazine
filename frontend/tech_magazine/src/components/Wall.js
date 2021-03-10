@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Articles from "./Articles";
+import LoadingMask from "./LoadingMask";
 
 function Wall() {
   const [data, setData] = useState(undefined);
@@ -24,19 +25,17 @@ function Wall() {
   if (data === undefined || data.data.articles === undefined) {
     return (
       <div>
-        <h1>Loading</h1>
+        <LoadingMask/>
         {/*<button onClick={register}>Get Data</button>*/}
       </div>
     );
   }
 
   return (
-    <div>
-      <div>
+      <div className="wall">
         {/*<button onClick={register}>Get Data</button>*/}
         <Articles news={data} />
       </div>
-    </div>
   );
 }
 
