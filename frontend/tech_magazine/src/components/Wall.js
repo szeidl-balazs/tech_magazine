@@ -13,29 +13,20 @@ function Wall() {
     }).then((res) => setData(res));
   }, []);
 
-  /* const register = () => {
-    Axios({
-      method: "GET",
-      url: "http://localhost:8000/",
-    }).then((res) => setData(res));
-  };*/
-
   console.log(data);
 
   if (data === undefined || data.data.articles === undefined) {
     return (
       <div>
-        <LoadingMask/>
-        {/*<button onClick={register}>Get Data</button>*/}
+        <LoadingMask />
       </div>
     );
   }
 
   return (
-      <div className="wall">
-        {/*<button onClick={register}>Get Data</button>*/}
-        <Articles news={data} />
-      </div>
+    <div className="wall">
+      <Articles news={data} />
+    </div>
   );
 }
 
