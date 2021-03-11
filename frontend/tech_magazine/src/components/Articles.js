@@ -9,7 +9,7 @@ function Articles({ news }) {
           <div className="article" key={index}>
             <a href={article.url} rel="noreferrer" target="_blank"><img className="image" src={article.urlToImage} alt="Image Not Found, please visit the website for more info" /></a>
             <div className="right-article">
-              <a href={article.url} rel="noreferrer" target="_blank"><h2 className="title">{article.title}</h2></a>
+              <a href={article.url} rel="noreferrer" target="_blank"><h5 className="title">{article.title}</h5></a>
               <p className="description">{article.description}</p>
             </div>
           </div>
