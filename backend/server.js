@@ -1,3 +1,4 @@
+const random = require("./helper");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -13,6 +14,8 @@ app.get("/", function (req, res) {
     .topHeadlines({
       category: "technology",
       language: "en",
+      pagesize: 10,
+      page: random.checkNum(),
     })
     .then((response) => {
       res.send(response);
