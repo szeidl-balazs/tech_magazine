@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Articles from "./Articles";
 import LoadingMask from "./LoadingMask";
+import Navbar from "./Navbar";
 
 function Wall() {
   const [data, setData] = useState(undefined);
@@ -25,6 +26,7 @@ function Wall() {
 
   return (
     <div className="wall">
+      <Navbar/>
       <Articles news={data} />
     </div>
   );
