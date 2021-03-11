@@ -7,7 +7,7 @@ function Articles({ news }) {
         <h2 className="fl">Technology</h2>
         {news.data.articles.map((article, index) => (
           <div className="article" key={index}>
-            <a href={article.url} rel="noreferrer" target="_blank"><img className="image" src={article.urlToImage} alt={article.title} /></a>
+            <a href={article.url} rel="noreferrer" target="_blank"><img className="image" src={article.urlToImage} alt="Image Not Found, please visit the website for more info" /></a>
             <div className="right-article">
               <a href={article.url} rel="noreferrer" target="_blank"><h2 className="title">{article.title}</h2></a>
               <p className="description">{article.description}</p>
