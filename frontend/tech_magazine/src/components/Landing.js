@@ -2,7 +2,6 @@ import React from 'react'
 import logo2 from "../logo/logo2.svg"
 import {Link} from "react-router-dom";
 
-//import LoadingMask from './LoadingMask'
 
 function Landing() {
   return (

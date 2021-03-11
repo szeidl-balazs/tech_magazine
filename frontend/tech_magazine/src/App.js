@@ -2,22 +2,19 @@ import "./scss/App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Wall from "./components/Wall";
 import Landing from "./components/Landing";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 function App() {
-  const [showLanding, setShowLanding] = useState(false);
+  let visited = localStorage["alreadyVisited"];
 
   useEffect(() => {
-    let visited = localStorage["alreadyVisited"];
     if (visited) {
-      setShowLanding(false);
     } else {
       localStorage["alreadyVisited"] = true;
-      setShowLanding(true);
     }
   }, []);
 
-  if (showLanding) {
+  if (!localStorage["alreadyVisited"]) {
     return (
       <Router>
         <div className="App">

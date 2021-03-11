@@ -166,3 +166,44 @@ h3 {
   color: white;
   transform: rotateY(180deg);
 }
+
+@media screen and (max-width: 425px) {
+
+  .landing-container {
+    justify-content: space-evenly;
+  }
+
+  .landing {
+    margin-top: 30px;
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .flip-box {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+
+  .landing-container {
+    justify-content: space-evenly;
+  }
+
+  .landing {
+    margin-top: 30px;
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+
+  .flip-box {
+    margin-top: 30px;
+  }
+}
+
