@@ -9,6 +9,7 @@ function App() {
 
   useEffect(() => {
     if (!visited) {
+      localStorage["alreadyVisited"] = true;
     }
   }, []);
 
