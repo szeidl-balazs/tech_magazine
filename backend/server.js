@@ -1,3 +1,4 @@
+const random = require("./helper");
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -8,20 +9,13 @@ const PORT = 8000;
 
 app.use(cors());
 
-let randomNum = 1;
-
-function randomize() {
-  randomNum = Math.floor(Math.random() * Math.floor(10) + 1);
-  return randomNum;
-}
-
 app.get("/", function (req, res) {
   newsapi.v2
     .topHeadlines({
       category: "technology",
       language: "en",
       pagesize: 10,
-      page: randomize(),
+      page: random.checkNum(),
     })
     .then((response) => {
       res.send(response);

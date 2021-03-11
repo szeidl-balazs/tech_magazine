@@ -23,7 +23,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/" exact component={Landing} />
-            <Route path="/" component={Wall} />
+            <Route path="/wall" component={Wall} />
           </Switch>
         </div>
       </Router>
@@ -35,7 +35,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={Wall} />
-          <Route path="/wall" exact component={Wall} />
+          <Route path="/wall" component={Wall} />
         </Switch>
       </div>
     </Router>
