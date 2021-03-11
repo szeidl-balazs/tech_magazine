@@ -8,9 +8,7 @@ function App() {
   let visited = localStorage["alreadyVisited"];
 
   useEffect(() => {
-    if (visited) {
-    } else {
-      localStorage["alreadyVisited"] = true;
+    if (!visited) {
     }
   }, []);
 
