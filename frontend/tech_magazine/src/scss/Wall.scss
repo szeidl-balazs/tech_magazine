@@ -10,6 +10,7 @@
   h1 {
     margin: 30px;
     margin-top: 80px;
+
     font-size: 80px;
     font-family: "Rye", cursive;
     color: #348100;
@@ -17,11 +18,15 @@
   }
 
   h2 {
-    font-size: 30px;
     margin-bottom: 85px;
+
+    font-size: 40px;
     font-weight: 700;
-    //letter-spacing: 2px;
   }
+}
+
+.title {
+  font-size: 25px;
 }
 
 .article {
@@ -29,17 +34,23 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 20px;
+
   width: 80vw;
   height: 20%;
+
+  margin: 20px;
 }
 
 .image {
   width: 300px;
   height: 250px;
-  border-radius: 5px;
+
   margin: 0px 30px;
+
   object-fit: cover;
+
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: 6px 4px #888888;
   border-radius: 10px;
 
   &:hover {
@@ -49,21 +60,20 @@
 }
 
 .right-article {
-  border: 0.5px solid black;
-  border-radius: 5px;
   width: 750px;
   height: 250px;
-  padding: 15px;
-  background-color: lightgray;
-  //box-shadow: 2px 2px black;
 
-  p {
-    font-size: 24px;
-  }
+  padding: 15px;
+
+  background-color: rgb(181, 212, 169);
+
+  border-radius: 5px;
+  box-shadow: 6px 4px #888888;
 
   a {
     outline: none;
     text-decoration: none;
+
     color: black;
 
     &:hover {
@@ -76,7 +86,11 @@
 .description {
   width: 100%;
   height: 60px;
+
   margin-top: 30px;
+
+  font-size: 24px;
+
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -87,21 +101,25 @@
   }
 
   .article {
-    width: 90vw;
     flex-direction: column;
     align-items: center;
+
+    width: 90vw;
+    padding-bottom: 40px;
+
     border-bottom: 1px solid black;
-    border-radius: 5px;
 
     .right-article {
-      width: 90vw;
+      width: 250px;
       height: 30vh;
-      align-self: center;
+
       text-align: center;
-      box-shadow: none;
+
       border: none;
       border-radius: 0;
+
       overflow: hidden;
+      text-overflow: ellipsis;
     }
     .description {
       display: none;
@@ -116,9 +134,36 @@
     display: none;
   }
   .image {
-    //display: none;
-    width: 90vw;
     align-self: center;
+
+    width: 90vw;
+
     border-radius: 0;
+  }
+
+  .title {
+    height: 100% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    width: 250px;
+  }
+
+  .title {
+    height: 40%;
+    font-size: 23px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .description {
+    height: 45%;
+    font-size: 20px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
