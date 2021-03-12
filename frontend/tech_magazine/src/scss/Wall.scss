@@ -35,6 +35,7 @@
   height: 280px;
 
   margin: 20px;
+  margin-bottom: 50px;
 
   border: 1px solid rgb(231, 231, 231);
   border-bottom: none;
@@ -51,19 +52,22 @@
   object-fit: cover;
 
   &:hover {
-    border-radius: 10px;
+    border-radius: 5px;
     transform: scale(1.05);
     transition: 0.2s;
   }
 }
 
 .right-article {
+  display: flex;
+  flex-direction: column;
+
   width: 750px;
   height: 280px;
 
   padding: 15px;
 
-  background-color: rgb(181, 212, 169);
+  background-color: rgb(245, 245, 245);
 
   a {
     outline: none;
@@ -79,35 +83,36 @@
 }
 
 .title {
+  position: relative;
+
   width: 100%;
-  height: 20px;
+  height: 100px;
 
   padding: 0 20px;
 
   font-size: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description {
+  position: relative;
+
   width: 100%;
-  height: 110px;
+  height: 120px;
 
   padding: 20px;
-  margin-top: 30px;
 
-  font-size: 24px;
+  font-size: 20px;
 
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-//ipad
-@media screen and (max-width: 768px) {
-  .image {
-    width: 250px;
-  }
-
+//kindle fire hdx linux
+@media screen and (max-width: 800px) {
   .title {
-    height: 40%;
+    height: 85px;
 
     font-size: 23px;
     overflow: hidden;
@@ -115,7 +120,7 @@
   }
 
   .description {
-    height: 70px;
+    height: 90px;
 
     margin-top: 15px;
 
@@ -125,7 +130,7 @@
   }
 
   .right-article {
-    width: 70vw;
+    width: 70%;
     height: 250px;
 
     margin: 0;
@@ -134,12 +139,74 @@
   }
 
   .article {
+    width: 85%;
     height: 250px;
 
     border: 1px solid rgb(231, 231, 231);
     border-bottom: none;
     border-right: none;
     box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, 0.38);
+  }
+
+  a {
+    width: 310px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .image {
+    width: 380px;
+    height: 250px;
+
+    margin: 0;
+
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+//ipad
+@media screen and (max-width: 768px) {
+  .article {
+    width: 85%;
+    height: 250px;
+
+    border: 1px solid rgb(231, 231, 231);
+    border-bottom: none;
+    border-right: none;
+    box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, 0.38);
+  }
+
+  .right-article {
+    width: 70%;
+    height: 250px;
+
+    margin: 0;
+
+    box-shadow: none;
+  }
+
+  .title {
+    height: 85px;
+
+    font-size: 23px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .description {
+    height: 90px;
+
+    margin-top: 15px;
+
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   a {
@@ -168,20 +235,27 @@
 @media screen and (max-width: 600px) {
   .article-container {
     background-color: rgb(230, 230, 230);
+
+    h1 {
+      font-size: 60px;
+      text-align: center;
+    }
   }
 
   .article {
     flex-direction: column;
     align-items: center;
 
-    width: 80vw;
-    height: 70vh;
+    width: 80%;
+    height: 65vh;
 
     .right-article {
       flex-direction: column;
 
-      width: 80vw;
-      height: 40vh;
+      width: 100%;
+      height: 35vh;
+
+      padding: 0;
 
       text-align: center;
 
@@ -192,7 +266,7 @@
       width: 90%;
       height: 95px;
 
-      margin-top: 10px;
+      margin-top: 5px;
       margin-left: auto;
       margin-right: auto;
 
@@ -200,10 +274,6 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-  }
-
-  h1 {
-    text-align: center;
   }
 
   .fl {
@@ -216,14 +286,16 @@
 
   .image {
     width: 100%;
-    height: 35vh;
+    height: 30vh;
 
     margin: auto;
   }
 
   .title {
     width: 100%;
-    height: 85px;
+    height: 110px;
+
+    padding: 20px 10px;
 
     overflow: hidden;
     text-overflow: ellipsis;

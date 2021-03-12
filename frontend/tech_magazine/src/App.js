@@ -11,7 +11,7 @@ function App() {
     if (!visited) {
       localStorage["alreadyVisited"] = true;
     }
-  }, []);
+  }, [visited]);
 
   if (!localStorage["alreadyVisited"]) {
     return (
