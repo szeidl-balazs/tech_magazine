@@ -9,11 +9,11 @@ function Articles({ news }) {
             <img
               className="image"
               src={article.urlToImage}
-              alt="Pics is Not Found, please visit the website for more info"
+              alt="Img Not Found, please visit the website for more info"
             />
           </a>
           <div className="right-article">
-            <a href={article.url} rel="noreferrer" target="_blank">
+            <a className="title-container" href={article.url} rel="noreferrer" target="_blank">
               <h5 className="title">{article.title}</h5>
             </a>
             <p className="description">{article.description}</p>
